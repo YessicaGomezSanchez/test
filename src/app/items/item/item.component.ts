@@ -1,4 +1,4 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { Iitem } from '../item.interface';
 
 @Component({
@@ -7,10 +7,17 @@ import { Iitem } from '../item.interface';
   styleUrls: ['./item.component.css']
 })
 export class ItemComponent implements OnInit {
-@Input () item: Iitem;
+  @Input() item: Iitem;
+  @Output() deleteItemEvent = new EventEmitter();
   constructor() { }
 
   ngOnInit() {
   }
 
+  deleteItem(id) {
+    // alert('Hola'+ id);
+    this.deleteItemEvent.emit({
+      id
+    });
+  }
 }

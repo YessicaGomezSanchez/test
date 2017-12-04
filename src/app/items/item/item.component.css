@@ -1,6 +1,6 @@
 div{
-border-style:solid, black;
-background-color: pink;
+border-style:double;
+background-color: rgba(255, 192, 204, 0.76);
 }
 p, h1, li{
     color:black;

@@ -2,4 +2,4 @@
   {{items}}
 </pre> -->
 
-<app-item *ngFor = "let item of items" [item] ='item'></app-item>
+<app-item *ngFor = "let item of items" [item]='item' (deleteItemEvent)="deleteItem($event)"></app-item>
